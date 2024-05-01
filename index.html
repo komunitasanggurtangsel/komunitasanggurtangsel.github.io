@@ -21,7 +21,16 @@
     <!-- parallax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   </head>
-  <body>
+  <body onload="hideLoader()">
+
+    <!-- loader -->
+    <div id="loader-page">
+        <div class="position-relativ">
+            <div class="position-absolute">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top top" id="navbar">
@@ -149,11 +158,11 @@
         <div class="container py-5">
             <div class="text-start" data-aos="fade-up" data-aos-duration="1500">
                 <div class="title text-purple text-shadow">Profile</div>
-                <div class="text-purple">Profile ketua Komunitas Anggur Tangsel</div>
+                <div class="text-purple">Profile Komunitas Anggur Tangsel</div>
             </div>
             <div class="row justify-content-center mt-3">
                 <div class="col-md-8 text-center my-4 " data-aos="fade-up" data-aos-duration="1500" id="profile-picture">
-                    <img src="src/img/image.png" alt="Foto profile" class="profile-foto" loading="lazy">
+                    <img src="src/img/logo.jpg" alt="Foto profile" class="profile-foto" loading="lazy" style="box-shadow:0px 0px 10px #7C6488;">
                     <span class="profile-circle-1"></span>
                     <span class="profile-circle-2"></span>
                 </div>
@@ -164,17 +173,19 @@
                             <!-- nama -->
                             <div class="col-5">Nama</div>
                             <div class="col-1">:</div>
-                            <div class="col-6">Pak Roy</div>
+                            <div class="col-6">Komunitas Anggur Tangsel</div>
                             <!-- ttl -->
-                            <div class="col-5">Tanggal lahir</div>
+                            <div class="col-5">Tanggal berdiri</div>
                             <div class="col-1">:</div>
-                            <div class="col-6">7 Desember 2019</div>
+                            <div class="col-6">27 December 2019</div>
                             <!-- tempat -->
-                            <div class="col-5">Tempat</div>
+                            <div class="col-5">Alamat</div>
                             <div class="col-1">:</div>
-                            <div class="col-6">Warung Lengkong [Jl. Skki, Pd. Jagung, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15326]</div>
+                            <div class="col-6">Jl. Pertanian No.1, Jombang, Kec. Ciputat, Kota Tangerang Selatan, Banten 15414</div>
                             <!-- link komunitas -->
-                            <div class="col-md-12 mt-2 d-grid">
+                            <div class="col-5"></div>
+                            <div class="col-1"></div>
+                            <div class="col-md-6 mt-2 d-grid">
                                 <a href="pages/budidaya.html" class="text-decoration-none btn btn-purple text-light border-none">lihat budidaya anggur ala pak Roy <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -194,16 +205,15 @@
                 <div class="col-md-6 mb-2">
                     <!-- join us -->
                     <div class="fw-bold text-purple">Join Us :</div>
-                    <a href="#" class="text-decoration-none text-secondary">Komunitas</a>
+                    <a href="#" class="text-decoration-none text-secondary">Komunitas Anggur Tangsel</a>
                     <!-- alamat -->
                     <div class="fw-bold text-purple mt-2">Address :</div>
-                    <a href="#" class="text-decoration-none text-secondary">Warung Lengkong <br>
-                    Jl. Skki, Pd. Jagung, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15326. 
-                    </a>
-                    <div class="text-secondary">Phone : <a href="#" class="text-decoration-none text-red">+629847094</a></div>
-                    <!-- Hours of Operation -->
-                    <div class="fw-bold text-purple mt-2">Hours of Operation :</div>
-                    <a href="#" class="text-decoration-none text-secondary">Monday - sunday (8.00 - 20.00)</a>
+                    <a href="#" class="text-decoration-none text-secondary">Jl. Pertanian No.1, Jombang, Kec. Ciputat, Kota Tangerang Selatan, Banten 15414</a>
+                    <div class="text-secondary"><i class="fa-brands fa-whatsapp fs-6 me-2"></i> : <a href="https://wa.me/+6281932281415" class="text-decoration-none text-red" target="_blank">+6281932281415</a></div>
+                    <!-- sosial media <i class="fa-brands fa-whatsapp"></i> -->
+                    <div class="fw-bold text-purple mt-2">Social Media :</div>
+                    <a href="https://www.instagram.com/komunitas_anggur_tangsel?igsh=MTRxMWl4MzVmcGZ5bw==" title="instagram" target="_blank" class="text-purple"><i class="fa-brands fa-instagram me-2 fs-6"></i> : komunitas_anggur_tangsel</a> <br>
+                    <a href="https://www.facebook.com/kats.anggur?mibextid=ZbWKwL" target="_blank" title="facebook" class="text-purple"><i class="fa-brands fa-facebook fs-6 me-2"></i> : Anggur Tangsel</a>
                 </div>
                 <!-- contact us -->
                 <div class="col-md-6">

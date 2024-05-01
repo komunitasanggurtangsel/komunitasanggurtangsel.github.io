@@ -21,7 +21,16 @@
     <!-- parallax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   </head>
-  <body>
+  <body onload="hideLoader()">
+
+  <!-- loader -->
+  <div id="loader-page">
+    <div class="position-relativ">
+        <div class="position-absolute">
+            <div class="loader"></div>
+        </div>
+    </div>
+</div>
 
     <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top top" id="navbar">
@@ -46,19 +55,19 @@
   <!-- end of navbar -->
 
   <section id="kerja">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-md-4 text-center" data-aos="fade-right" data-aos-duration="1500">
-                <img src="../src/img/Circular_Foods_Are_The_Absolute_Best_Foods_And_This_Is_Proof-removebg-preview.png" alt="" loading="lazy" class="logo-website">
-            </div>
-            <div class="col-md-8 position-relative" data-aos="fade-left" data-aos-duration="1500">
-                <div class="position-absolute top-50 start-0 translate-middle-y">
-                    <div class="fs-1 fw-bold text-light">Kerja Kami</div>
-                    <div class="text-light">Komunitas Anggur Tangsel</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="container">
+      <div class="position-relative">
+          <div class="deskripsi text-center" data-aos="fade-up" data-aos-duration="1500">
+              <div class="fs-1 fw-bold text-light">
+                  Kerja Kami
+                  <span class="bibit-icon text-green fw-bold"></span>
+              </div>
+              <div class="fs-5 text-light" data-aos="fade-up" data-aos-duration="1500">
+                Komunitas anggur tangsel
+              </div>
+          </div>
+      </div>
+  </div>
   </section>
 
   <section id="deskripsi-kerja">
@@ -125,16 +134,15 @@
                 <div class="col-md-6 mb-2">
                     <!-- join us -->
                     <div class="fw-bold text-purple">Join Us :</div>
-                    <a href="#" class="text-decoration-none text-secondary">Komunitas</a>
+                    <a href="#" class="text-decoration-none text-secondary">Komunitas Anggur Tangsel</a>
                     <!-- alamat -->
                     <div class="fw-bold text-purple mt-2">Address :</div>
-                    <a href="#" class="text-decoration-none text-secondary">Warung Lengkong <br>
-                    Jl. Skki, Pd. Jagung, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15326. 
-                    </a>
-                    <div class="text-secondary">Phone : <a href="#" class="text-decoration-none text-red">+629847094</a></div>
-                    <!-- Hours of Operation -->
-                    <div class="fw-bold text-purple mt-2">Hours of Operation :</div>
-                    <a href="#" class="text-decoration-none text-secondary">Monday - sunday (8.00 - 20.00)</a>
+                    <a href="#" class="text-decoration-none text-secondary">Jl. Pertanian No.1, Jombang, Kec. Ciputat, Kota Tangerang Selatan, Banten 15414</a>
+                    <div class="text-secondary"><i class="fa-brands fa-whatsapp fs-6 me-2"></i> : <a href="https://wa.me/+6281932281415" class="text-decoration-none text-red" target="_blank">+6281932281415</a></div>
+                    <!-- sosial media <i class="fa-brands fa-whatsapp"></i> -->
+                    <div class="fw-bold text-purple mt-2">Social Media :</div>
+                    <a href="https://www.instagram.com/komunitas_anggur_tangsel?igsh=MTRxMWl4MzVmcGZ5bw==" title="instagram" target="_blank" class="text-purple"><i class="fa-brands fa-instagram me-2 fs-6"></i> : komunitas_anggur_tangsel</a> <br>
+                    <a href="https://www.facebook.com/kats.anggur?mibextid=ZbWKwL" target="_blank" title="facebook" class="text-purple"><i class="fa-brands fa-facebook fs-6 me-2"></i> : Anggur Tangsel</a>
                 </div>
                 <!-- contact us -->
                 <div class="col-md-6">

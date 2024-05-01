@@ -12,6 +12,56 @@ body {
     overflow-x: hidden;
 }
 
+/* loader css */
+#loader-page {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    background-color: #f6f2f2;
+}
+
+#loader-page .position-absolute {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite;
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #7C6488;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    border-color: #386641;
+    animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
+    inset: 6px;
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+
 /* navbar with cream background */
 nav.navbar {
     background-color:#F2E8CF;
@@ -257,8 +307,8 @@ section#first-page .position-relative {
 section#first-page .deskripsi {
     position: absolute;
     top: 50%;
-    left: 0%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 section#first-page .deskripsi .bibit-icon {
@@ -269,14 +319,39 @@ section#first-page .deskripsi .bibit-icon {
 section#kerja {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right, #636964, #63696481, transparent), url('../img/amos-bar-zeev-GibvqWh_OcE-unsplash.jpg');
+    background-image:  url('../img/amos-bar-zeev-GibvqWh_OcE-unsplash.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #636964;
+    background-blend-mode: multiply;
 }
 
-section#kerja img.logo-website {
-    width: 80%;
+section#kerja .position-relative {
+    width: 100%;
+    height: 100vh;
+}
+
+section#kerja .deskripsi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+section#kerja .deskripsi .bibit-icon {
+    font-size: 1.5em;
+}
+
+section#kerja .deskripsi {
+}
+
+@media (max-width:576px) {   
+    section#kerja .col-md-8 .deskripsi {
+        position: relative;
+        margin: auto;
+        margin-top: 20px;
+    }
 }
 
 section#deskripsi-kerja .title {

@@ -23,3 +23,8 @@ var parallaxInstance = new Parallax(scene);
 function goBack() {
     window.history.back();
   }
+
+// hideloader
+function hideLoader() {
+    document.getElementById('loader-page').classList.add('d-none')
+}
