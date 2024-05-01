@@ -1,0 +1,348 @@
+::root {
+    --first-color: #386641;
+    --second-color: #6a994e;
+    --third-color: #a7c957;
+    --fourth-color: #f2e8cf;
+    --fiveth-color: #bc4749; 
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f2e8cf;
+    overflow-x: hidden;
+}
+
+/* navbar with cream background */
+nav.navbar {
+    background-color:#F2E8CF;
+    transition: 0.3s ease-in-out;
+}
+
+nav.navbar a.navbar-brand {
+    color: #7C6488;
+}
+
+nav.navbar a.navbar-brand img {
+    height: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+nav.navbar a.nav-link {
+    color: #386641;
+}
+
+nav.navbar a.nav-link:hover {
+    color: #bc4749;
+}
+
+nav.navbar a.nav-link.active {
+    color: #bc4749;
+    font-weight: bold;
+}
+
+/* navbar top/transparent */
+nav.navbar.top {
+    background-color: transparent;
+}
+
+nav.navbar.top a.navbar-brand {
+    color: #fff;
+}
+
+nav.navbar.top a.navbar-brand img {
+    height: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+nav.navbar.top a.nav-link {
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+nav.navbar.top a.nav-link:hover {
+    color: #bc4749;
+}
+
+nav.navbar.top a.nav-link.active {
+    color: #bc4749;
+    font-weight: bold;
+}
+
+#carouselDashboard .carousel-indicators button {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+#carouselDashboard .carousel-indicators button.active {
+    background-color: #a7c957;
+}
+
+#carouselDashboard .carousel-inner .carousel-item {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #636964;
+    background-blend-mode: multiply;
+    height: 100vh;
+    width: 100%;
+}
+
+#carouselDashboard .carousel-inner .carousel-item:nth-child(1) {
+    background-image: url('../img/gunter-hoffmann-LYaW8eq3mjs-unsplash.jpg');
+}
+
+#carouselDashboard .carousel-inner .carousel-item:nth-child(2) {
+    background-image: url('../img/andrew-welch-i5Crg4KLblY-unsplash.jpg');
+}
+
+#carouselDashboard .carousel-inner .carousel-item:nth-child(3) {
+    background-image: url('../img/ktryna-qaScW2qTo1I-unsplash.jpg');
+}
+
+section#about-us {
+    width: 100%;
+}
+
+section#about-us .col-md-4 img{
+    width: 100%;
+    height: 100%;
+}
+
+section#about-us .col-md-8 .deskripsi{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #36473a;
+}
+
+@media (max-width: 576px) {
+    section#about-us .col-md-8 .deskripsi{
+        position: inherit;
+    }
+}
+
+section#about-us .col-md-8 .deskripsi .title span{
+    color: #7C6488;
+    font-size: 2em;
+}
+
+section#documentation {
+    width: 100%;
+    background: linear-gradient(to bottom, #636964, transparent, #636964), url('../img/9670728-removebg-preview.png');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+section#documentation span.title {
+    font-size: 2em;
+}
+
+section#documentation #documentationCarousel .carousel-item img{
+    aspect-ratio: 16 / 9;
+    height: 50vh;
+    background-color: red;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    box-shadow: 0px 2px 10px rgb(110, 105, 105);
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+section#documentation #documentationCarousel .carousel-item img:hover{
+    transform: scale(1.15);
+    border-radius: 0px;
+}
+
+section#profile .title{
+    font-size: 2em;
+}
+
+section#profile #profile-picture {
+    position: relative;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+section#profile .profile-circle-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    border-top: 3.5px solid transparent;
+    border-right: 3.5px solid #674c75;
+    border-bottom: 3.5px solid transparent;
+    border-left: 3.5px solid #674c75;
+    animation: spinner 8s linear infinite;
+}
+
+section#profile .profile-circle-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    border-top: 3.5px solid transparent;
+    border-right: 3.5px solid #386641;
+    border-bottom: 3.5px solid transparent;
+    border-left: 3.5px solid #386641;
+    animation: spinner 5s linear infinite;
+}
+
+@keyframes spinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+section#profile img.profile-foto{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #efede6;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+footer input.form-control,
+footer textarea.form-control {
+    border-radius: 0px;
+    outline: none;
+    color: #386641;
+}
+
+footer input.form-control:focus,
+footer textarea.form-control:focus {
+    box-shadow: none;
+    box-shadow: 0px 0px 2px #7C6488;
+}
+
+footer input.form-control::placeholder,
+footer textarea.form-control::placeholder {
+    font-size: 0.8em;
+}
+
+footer button.btn {
+    border-radius: 0px;
+}
+
+/* BUDIDAYA PAGE */
+section#first-page {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/farsai-chaikulngamdee-7wQs3fIgOZ0-unsplash.jpg);
+    background-color: #636964;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+}
+
+section#first-page .position-relative {
+    width: 100%;
+    height: 100vh;
+}
+
+section#first-page .deskripsi {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}
+
+section#first-page .deskripsi .bibit-icon {
+    font-size: 1.5em;
+}
+
+/* KERJA KAMI */
+section#kerja {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #636964, #63696481, transparent), url('../img/amos-bar-zeev-GibvqWh_OcE-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section#kerja img.logo-website {
+    width: 80%;
+}
+
+section#deskripsi-kerja .title {
+    font-size: 2em;
+}
+
+/* KONTAK */
+body.kontak {
+    background-color: #efede6;
+}
+
+body.kontak nav.navbar {
+    background-color: #F2E8CF;
+}
+
+body.kontak nav.navbar a.navbar-brand {
+    cursor: pointer;
+}
+
+body.kontak footer#kontak-section {
+    background-color: #efede6;
+}
+
+body.kontak footer#kontak-section .title {
+    font-size: 2.5em;
+}
+
+
+/* declaration */
+.text-purple {
+    color: #7C6488;
+}
+
+.text-green {
+    color: #386641;
+}
+
+.bg-purple {
+    background-color: #7C6488;
+}
+
+.text-red {
+    color: #bc4749;
+}
+
+.text-shadow {
+    text-shadow: 0px 1px 3px rgb(83, 79, 79);
+}
+
+.border-none {
+    border-radius: 0px;
+}
+
+.btn-purple {
+    background-color: #7C6488;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-purple:hover {
+    background-color: #674c75;
+}
+
+/* section#tata-cara { 
+} */
+
+section#tata-cara .title {
+    font-size: 2em;
+}
+
